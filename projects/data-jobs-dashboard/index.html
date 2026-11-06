@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Data Jobs Dashboard | Saleh Alkhowaiter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <div class="topbar">
+    <a href="../../index.html">← Portfolio</a>
+    <a href="ar.html">العربية</a>
+  </div>
+
+  <h1>Data Jobs Dashboard</h1>
+  <p class="subtitle">An interactive Power BI dashboard comparing the data job market in Saudi Arabia, the USA, and worldwide.</p>
+
+  <img src="dashboard.gif" alt="Animated preview of the Data Jobs Dashboard">
+
+  <h2>Overview</h2>
+  <p>Which skills do data jobs ask for, and how does the Saudi market compare with the US and the rest of the world? This dashboard answers that question using real job postings, letting the viewer switch between the three regions and drill down from the market level to individual job titles.</p>
+
+  <h2>Data</h2>
+  <p>A job postings table with related skills tables, cleaned and prepared in Power Query. Source: Google Jobs API (via SerpAPI).</p>
+
+  <h2>Page 1: Market overview</h2>
+  <p>All three markets (USA, Global, and KSA) are shown side by side. Each region has a card with its number of postings, the share of postings requiring a certification, and the median yearly salary. A clustered bar chart ranks the top 10 skills by percentage of postings in each region, and a ribbon chart tracks how postings are distributed across quarters. A job title list filters the page, and a drill-through button opens a detailed view for the selected title.</p>
+  <figure>
+    <a href="page1.png" target="_blank"><img src="page1.png" alt="Dashboard page 1: market overview"></a>
+    <figcaption>Page 1 (click to enlarge)</figcaption>
+  </figure>
+
+  <h2>Page 2: Job title deep dive</h2>
+  <p>A drill-through page for one of six data job titles, reached from the first page. The title at the top updates dynamically through a DAX measure. The page breaks down the selected role by health insurance, schedule type, and remote work, shows its top 10 skills with a split by skill type, and maps where the postings are located.</p>
+  <figure>
+    <a href="page2.png" target="_blank"><img src="page2.png" alt="Dashboard page 2: job title deep dive"></a>
+    <figcaption>Page 2 (click to enlarge)</figcaption>
+  </figure>
+
+  <h2>Analytical decisions</h2>
+  <ul>
+    <li><strong>Percentages instead of counts</strong> when comparing skills across regions, because the number of postings differs greatly between them. Raw counts would simply show that bigger markets have more of everything.</li>
+    <li><strong>Salary kept as a static figure for Saudi Arabia.</strong> Salary data there is sparse, so I dropped salary trends over time instead of forcing a comparison the data can't support.</li>
+    <li><strong>Regions fixed inside the measures, job title filtered from the page.</strong> This is why the three regions always appear side by side for comparison, while the job title list stays interactive.</li>
+  </ul>
+
+  <h2>Key findings</h2>
+  <ul>
+    <li>SQL and Python lead the skill demand in all three markets, though SQL appears in a smaller share of Saudi postings (roughly 57%) than in US postings (roughly 67%).</li>
+    <li>Power BI and Tableau stand out in KSA: Power BI appears in roughly 30% of Saudi postings against roughly 16% in the USA, and Tableau in roughly 34% against 25%.</li>
+    <li>KSA has only about 1K postings compared with 130K in the USA, so its percentages are less stable and should be read as indicative.</li>
+  </ul>
+
+  <h2>Tools</h2>
+  <ul class="tools">
+    <li>Power BI</li>
+    <li>DAX</li>
+    <li>Power Query</li>
+  </ul>
+
+  <!-- LINK START -->
+  <h2>Explore the report</h2>
+  <p>Prefer to click around yourself? Open the live interactive version:</p>
+  <p><a href="Data-Jobs-Dashboard.pbix" target="_blank" rel="noopener">Download the Power BI file</a></p>
+  <!-- LINK END -->
+</main>
+</body>
+</html>
