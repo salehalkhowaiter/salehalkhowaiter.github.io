@@ -19,10 +19,10 @@
   <img src="dashboard.gif" alt="Animated preview of the Data Jobs Dashboard">
 
   <h2>Overview</h2>
-  <p>Which skills do data jobs ask for, and how does the Saudi market compare with the US and the rest of the world? This dashboard answers that question using real job postings, letting the viewer switch between the three regions and drill down from the market level to individual job titles.</p>
+  <p>Which skills do data jobs ask for, and how does the Saudi market compare with the US and the rest of the world? This dashboard answers that question using real job postings, letting the viewer compare the three regions side by side and drill down to individual job titles.</p>
 
   <h2>Data</h2>
-  <p>A job postings table with related skills tables, cleaned and prepared in Power Query. Source: Google Jobs API (via SerpAPI).</p>
+  <p>A star schema built around a job postings fact table with related skills tables, cleaned and prepared in Power Query. Source: <a href="https://huggingface.co/datasets/lukebarousse/data_jobs" target="_blank" rel="noopener">data_jobs dataset</a> by Luke Barousse (Apache 2.0 license), collected from Google job search results via SerpApi. Modeling, cleaning, and analysis by me.</p>
 
   <h2>Page 1: Market overview</h2>
   <p>All three markets (USA, Global, and KSA) are shown side by side. Each region has a card with its number of postings, the share of postings requiring a certification, and the median yearly salary. A clustered bar chart ranks the top 10 skills by percentage of postings in each region, and a ribbon chart tracks how postings are distributed across quarters. A job title list filters the page, and a drill-through button opens a detailed view for the selected title.</p>
@@ -60,9 +60,9 @@
   </ul>
 
   <!-- LINK START -->
-  <h2>Explore the report</h2>
-  <p>Prefer to click around yourself? Open the live interactive version:</p>
-  <p><a href="Data-Jobs-Dashboard.pbix" target="_blank" rel="noopener">Download the Power BI file</a></p>
+  <h2>Download the project file</h2>
+  <p>Want to explore the dashboard yourself? Download the Power BI file (opening it requires Power BI Desktop):</p>
+  <p><a class="button" href="Data-Jobs-Dashboard.pbix" download>Download the Power BI file</a></p>
   <!-- LINK END -->
 </main>
 </body>
